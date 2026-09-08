@@ -46,7 +46,8 @@ export function Hero() {
           height={1600}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/75 via-background/35 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,color-mix(in_oklab,var(--background)_65%,transparent)_0%,transparent_65%)]" />
       </motion.div>
 
       <div className="relative z-10 text-center px-6 pt-24">
