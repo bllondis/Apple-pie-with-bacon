@@ -92,7 +92,11 @@ export function IngredientsSection() {
               >
                 <img
                   src={src}
-                  alt={i === 0 ? "Sliced apples, cinnamon and brown sugar" : "Thick-cut bacon crisping in a skillet"}
+                  alt={
+                    i === 0
+                      ? "Sliced apples, cinnamon and brown sugar"
+                      : "Thick-cut bacon crisping in a skillet"
+                  }
                   loading="lazy"
                   width={1088}
                   height={1360}

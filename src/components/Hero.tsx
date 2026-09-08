@@ -63,7 +63,13 @@ export function Hero() {
         <h1 className="font-display text-6xl sm:text-7xl md:text-[9rem] lg:text-[11rem] leading-[0.88] italic text-balance">
           {["Apple Pie", "with Bacon"].map((word, i) => (
             <span key={word} className="block overflow-hidden">
-              <motion.span custom={i} variants={reveal} initial="hidden" animate="show" className="inline-block">
+              <motion.span
+                custom={i}
+                variants={reveal}
+                initial="hidden"
+                animate="show"
+                className="inline-block"
+              >
                 {word}
               </motion.span>
             </span>
@@ -76,8 +82,8 @@ export function Hero() {
           transition={{ delay: 1.3, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-md mx-auto mt-10 text-sm font-light leading-relaxed tracking-wide"
         >
-          Bourbon-caramel apples under a lattice of maple-lacquered bacon.
-          Salt, smoke and sugar in the same forkful.
+          Bourbon-caramel apples under a lattice of maple-lacquered bacon. Salt, smoke and sugar in
+          the same forkful.
         </motion.p>
 
         <motion.div

@@ -41,8 +41,8 @@ export function ServeSection() {
               Warm, salted, and slightly reckless.
             </h2>
             <p className="text-sm font-light leading-relaxed text-muted-foreground mb-12">
-              Cut thick wedges. The lattice should crack under the knife and the
-              caramel should move slowly. Anything faster and it needed another hour.
+              Cut thick wedges. The lattice should crack under the knife and the caramel should move
+              slowly. Anything faster and it needed another hour.
             </p>
 
             <dl className="border-t border-border">
