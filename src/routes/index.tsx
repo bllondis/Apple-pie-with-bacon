@@ -1,24 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { Nav } from "@/components/Nav";
+import { Hero } from "@/components/Hero";
+import { StorySection } from "@/components/StorySection";
+import { IngredientsSection } from "@/components/IngredientsSection";
+import { MethodSection } from "@/components/MethodSection";
+import { ServeSection } from "@/components/ServeSection";
+import { Footer } from "@/components/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Apple Pie with Bacon — Smoke & Sugar Recipe No. 01" },
+      {
+        name: "description",
+        content:
+          "Bourbon-caramel apples under a maple-lacquered bacon lattice. Full ingredients, six-step method and serving notes for a salted-sweet apple bacon pie.",
+      },
+      { property: "og:title", content: "Apple Pie with Bacon — Smoke & Sugar" },
+      {
+        property: "og:description",
+        content:
+          "Bourbon-caramel apples under a maple-lacquered bacon lattice. A salted-sweet apple pie, done properly.",
+      },
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="bg-background text-foreground overflow-x-hidden">
+      <SmoothScroll />
+      <Nav />
+      <Hero />
+      <StorySection />
+      <IngredientsSection />
+      <MethodSection />
+      <ServeSection />
+      <Footer />
+    </main>
   );
 }
